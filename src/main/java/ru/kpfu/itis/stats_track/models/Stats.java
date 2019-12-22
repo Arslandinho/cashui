@@ -2,15 +2,18 @@ package ru.kpfu.itis.stats_track.models;
 
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Date;
 
 @Data
 @Builder
-@Table
+@Getter
+@Setter
 public class Stats {
+    private Date __time;
 
-    @PrimaryKey
     private String id;
     private String name;
 }
